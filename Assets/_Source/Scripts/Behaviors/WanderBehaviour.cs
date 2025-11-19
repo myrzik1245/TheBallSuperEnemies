@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class Wander : IBehaviour
+public class WanderBehaviour : IBehaviour
 {
     private float _timeToSwichDirection;
     private Timer _timer;
 
     private IReadOnlyPosition _characterPosition;
 
-    public Wander(IReadOnlyPosition characterPosition, float timeToSwichDirection)
+    public WanderBehaviour(IReadOnlyPosition characterPosition, float timeToSwichDirection)
     {
         _timeToSwichDirection = timeToSwichDirection;
         _characterPosition = characterPosition;

@@ -25,22 +25,22 @@ public class EnemySpawner : MonoBehaviour
         switch (behaviourType)
         {
             case BehaviourTypes.Idol:
-                return new Idol();
+                return new IdolBehaviour();
 
             case BehaviourTypes.Patrol:
-                return new Patrol(_patrolPoints, spawnedEnemy);
+                return new PatrolBehaviour(_patrolPoints, spawnedEnemy);
 
             case BehaviourTypes.Wander:
-                return new Wander(spawnedEnemy, _timeToSwichDirection);
+                return new WanderBehaviour(spawnedEnemy, _timeToSwichDirection);
 
             case BehaviourTypes.Flee:
-                return new Flee(spawnedEnemy, _player);
+                return new FleeBehaviour(spawnedEnemy, _player);
 
             case BehaviourTypes.Chase:
-                return new Chase(spawnedEnemy, _player);
+                return new ChaseBehaviour(spawnedEnemy, _player);
 
             case BehaviourTypes.PanicDeath:
-                return new PanicDeath(spawnedEnemy, _deathParticlePrefab);
+                return new PanicDeathBehaviour(spawnedEnemy, _deathParticlePrefab, spawnedEnemy);
             default:
                 Debug.LogError($"This type of behavior: {behaviourType} is not supported.");
                 return null;

@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class Chase : IBehaviour
+public class ChaseBehaviour : IBehaviour
 {
     private IReadOnlyPosition _position;
     private IReadOnlyPosition _targetPosition;
 
     private const float ArrivalThreshold = 0.5f;
 
-    public Chase(IReadOnlyPosition position, IReadOnlyPosition targetPosition)
+    public ChaseBehaviour(IReadOnlyPosition position, IReadOnlyPosition targetPosition)
     {
         _position = position;
         _targetPosition = targetPosition;

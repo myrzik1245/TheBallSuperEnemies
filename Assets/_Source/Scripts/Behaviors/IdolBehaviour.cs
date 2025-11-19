@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Idol : IBehaviour
+public class IdolBehaviour : IBehaviour
 {
     public Vector3 Direction => Vector3.zero;
 

@@ -17,8 +17,4 @@ public class InputMovementControl : IMovementControl
     {
         return _input.Movement.magnitude > _movementThreshold;
     }
-
-    public void Update(float deltaTime)
-    {
-    }
 }

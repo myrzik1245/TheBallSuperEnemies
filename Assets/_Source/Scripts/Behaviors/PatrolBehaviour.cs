@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Patrol : IBehaviour
+public class PatrolBehaviour : IBehaviour
 {
     private IReadOnlyPosition[] _patrolPoints;
     private IReadOnlyPosition _characterPosition;
@@ -10,7 +10,7 @@ public class Patrol : IBehaviour
     private const float ArrivalThreshold = 0.5f;
 
 
-    public Patrol(IReadOnlyPosition[] patrolPoints, IReadOnlyPosition position)
+    public PatrolBehaviour(IReadOnlyPosition[] patrolPoints, IReadOnlyPosition position)
     {
         _patrolPoints = patrolPoints;
         _characterPosition = position;

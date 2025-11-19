@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Flee : IBehaviour
+public class FleeBehaviour : IBehaviour
 {
     private IReadOnlyPosition _characterPosition;
     private IReadOnlyPosition _targetPosition;
 
-    public Flee(IReadOnlyPosition characterPosition, IReadOnlyPosition targetPosition)
+    public FleeBehaviour(IReadOnlyPosition characterPosition, IReadOnlyPosition targetPosition)
     {
         _characterPosition = characterPosition;
         _targetPosition = targetPosition;

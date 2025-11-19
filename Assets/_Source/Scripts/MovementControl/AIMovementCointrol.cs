@@ -4,9 +4,9 @@ public class AIMovementCointrol : IMovementControl
 {
     private IBehaviour _behavior;
 
-    public AIMovementCointrol(IBehaviour startehaviour)
+    public AIMovementCointrol(IBehaviour startBehaviour)
     {
-        _behavior = startehaviour;
+        _behavior = startBehaviour;
         _behavior.Entry();
     }
 

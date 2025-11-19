@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Character))]
 [RequireComponent(typeof(Rigidbody))]
-public class Enemy : MonoBehaviour, IReadOnlyPosition
+public class Enemy : MonoBehaviour, IReadOnlyPosition, IAlive
 {
     [SerializeField] private float _movementSpeed;
 
