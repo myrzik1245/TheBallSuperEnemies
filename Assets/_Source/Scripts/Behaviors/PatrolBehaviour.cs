@@ -9,7 +9,6 @@ public class PatrolBehaviour : IBehaviour
 
     private const float ArrivalThreshold = 0.5f;
 
-
     public PatrolBehaviour(IReadOnlyPosition[] patrolPoints, IReadOnlyPosition position)
     {
         _patrolPoints = patrolPoints;
@@ -18,8 +17,8 @@ public class PatrolBehaviour : IBehaviour
         _pointIndex = 0;
     }
 
-    private IReadOnlyPosition CurrentPointPosition => _patrolPoints[_pointIndex];
     public Vector3 Direction => (CurrentPointPosition.Value - _characterPosition.Value).normalized;
+    private IReadOnlyPosition CurrentPointPosition => _patrolPoints[_pointIndex];
 
     public bool CanMove()
     {

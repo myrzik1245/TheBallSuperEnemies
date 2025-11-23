@@ -27,6 +27,11 @@ public class Enemy : MonoBehaviour, IReadOnlyPosition, IAlive
         _character.Initialize(new VelocityMover(rigidbody, _movementSpeed), _movementControl);
     }
 
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
+
     private void Update()
     {
         _movementControl.Update(Time.deltaTime);
@@ -42,10 +47,5 @@ public class Enemy : MonoBehaviour, IReadOnlyPosition, IAlive
     {
         if (other.TryGetComponent(out Player player))
             _movementControl.SetBehaviour(_baseBehaviour);
-    }
-
-    public void Death()
-    {
-        Destroy(gameObject);
     }
 }

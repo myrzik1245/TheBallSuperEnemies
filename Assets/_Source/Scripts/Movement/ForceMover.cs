@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ForceMover : IMover
 {
-    private readonly Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;
     private float _force;
 
     public ForceMover(Rigidbody rigidbody, float force)

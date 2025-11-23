@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class VelocityMover : IMover
 {
-    private readonly Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;
     private float _speed;
 
     public VelocityMover(Rigidbody rigidbody, float speed)
